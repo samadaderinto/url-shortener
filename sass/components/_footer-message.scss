@@ -1,0 +1,44 @@
+.footer-main {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+
+
+  &__links {
+    justify-content: space-between;
+    display: flex;
+    text-transform: capitalize;
+    @include footerItemBorder();
+    width: 450px;
+
+    & a {
+      text-decoration: none;
+      color: $color-footer-links;
+      display: inline-block;
+      height: 25px;
+      width: fit-content;
+    }
+
+    & a:hover {
+      text-decoration: underline;
+      transform: translateY(-3px);
+    }
+  }
+
+  &__about {
+    width: 400px;
+
+    @include footerItemBorder();
+
+    & p a {
+      text-decoration: none;
+      width: fit-content + 9px;
+      color: $color-footer-links;
+      display: inline-block;
+    }
+
+    & p a:hover {
+      @include footerItemHover
+    }
+  }
+}

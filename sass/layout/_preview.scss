@@ -1,0 +1,8 @@
+.preview {
+    position: relative;
+
+    & svg {
+        position: absolute;
+        bottom: -1px;
+    }
+}

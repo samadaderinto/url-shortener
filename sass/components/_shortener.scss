@@ -1,0 +1,39 @@
+.main__shortener {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    margin: 0 auto;
+
+    & input {
+        @include shorteningTools();
+        width: 800px;
+        border: 1px solid $color-invalid-url;
+        box-sizing: border-box;
+        padding: 15px 15px 10px;
+        font-size: 18px;
+        border-right: none;
+    }
+
+    & input:focus,
+    & input:active {
+        outline: none;
+    }
+
+
+    & button {
+        // @include shorteningTools();
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        border: 1px solid $color-invalid-url;
+        color: $color-secondary;
+        width: 130px;
+        background-color: #2d2df5;
+        align-items: center;
+        height: 50px;
+        justify-content: center;
+        display: flex;
+        font-size: 17px;
+    }
+}

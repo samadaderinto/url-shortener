@@ -1,0 +1,44 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $color-primary;
+    padding: $padding-layout;
+
+
+
+    & .header__navigation {
+        display: flex;
+        justify-content: space-between;
+        width: 180px;
+        align-items: center;
+
+        & a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            height: 40px;
+            width: 85px;
+            border-radius: 4px;
+            color: $color-header-text;
+            font-size: 17px;
+
+        }
+
+        & a:hover {
+            transform: translateY(-3px);
+            transition: .3s;
+        }
+
+        & a:first-child {
+            @include buttoncalltoaction;
+        }
+    }
+
+
+    & .header__title h1 {
+        @include logo()
+    }
+
+}
